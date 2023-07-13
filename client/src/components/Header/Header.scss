@@ -1,0 +1,122 @@
+@import "../../css-config/mixins.scss";
+
+.headers{
+    background-color: #212121;
+    color: #fff;
+   
+
+
+
+    .header{
+        max-width: 1200px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        height: 50px;
+        @include md{
+            padding: 0 40px;
+            height: 80px;
+            margin: 0 auto;
+           
+        }
+
+    .header-left{
+        display: none;
+        ul{
+            display: flex;
+            gap: 20px;
+          
+            li{
+                list-style: none;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                
+                
+              }
+            
+         }
+        @include md{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+    }
+    
+
+     .header-center{
+        font-size: 22px;
+        @include md{
+            font-size: 34px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            
+        }
+     }
+
+     .header-icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include md{
+            gap: 24px;
+        }
+        position: relative;
+        cursor: pointer;
+        svg{
+            font-size: 20px;
+            font-weight: 700;
+            @include md{
+                font-size: 24px;
+            }
+        }
+        .count{
+
+            position: absolute;           
+            min-width: 20px;
+            text-align: center;
+            top: -9px;
+            right: -12px;
+            font-size: 12px;
+            width: 18px;
+            height: 18px;
+            background-color: #2de82d;
+            border-radius: 10px;
+            z-index: 9;
+            cursor: pointer;
+
+            
+     
+         
+        }
+     }
+
+   
+    }
+    
+    .stickyset{
+        position: sticky !important;
+        top: 0 !important;
+        transform: translateY(-80px) !important;
+        animation: sticky-header 0.4s ease forwards;
+       
+        
+    }
+
+ 
+   
+
+}
+
+@keyframes sticky-header {
+    0%{transform: translateY(-80px);}
+    100%{
+        transform: translateY(0);
+    }
+    
+}

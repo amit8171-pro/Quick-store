@@ -1,0 +1,109 @@
+@import "../../../css-config/mixins.scss";
+
+.content{
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 40px 0;
+    position: relative;
+  
+    @include md{
+        // height: calc(100vh - 80px);
+    }
+   
+    .bannar-content{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        align-items: center;
+        @include md{
+            flex-direction: row;
+            max-width: 1200px;
+        }
+    }
+
+    .bannar-img{
+       
+        img{
+           width: 200px;
+           margin-bottom: 20px;
+           position: relative;
+           z-index: 9;
+           @include md{
+            width: 500px;
+            margin-right: 60px;
+            margin-top: 50px;
+            margin-bottom: 0;
+           }
+           @include xxl{
+            width: 600px;
+            margin-right: 0;
+            margin-top: 0;
+        
+           }
+        }
+    }
+
+    .bannar-text{
+        color: #fff;
+        text-align: center;
+        margin: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include md{
+          position: absolute;
+          left: 50px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        @include xxl{
+            left: 0;
+            
+          }
+
+        h1{
+            font-size: 5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1;
+            @include md{
+                font-size: 180px;
+            }
+        }
+        p{
+            font-size: 14px;
+            margin-bottom:20px;
+            line-height: 20px;
+            font-weight: 600;
+            max-width: 300px;
+            @include md{
+                
+            }
+            
+        }
+
+        .bannar-btn{
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            .bannar-btn-rm{
+                border: 1px solid #fff;
+                padding: 10px;
+                
+
+            }
+            .sn{
+                background: #ddd;
+                color: #000;
+            }
+        }
+    }
+
+    
+}
